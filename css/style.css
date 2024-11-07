@@ -94,3 +94,31 @@ video {
   -webkit-text-stroke: 2px #fff;
   color: transparent;
 }
+
+.game-navbar {
+  background-color: blue;
+  padding: 10px;
+}
+
+.game-navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.game-navbar li {
+  float: left;
+}
+
+.game-navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.game-navbar li a:hover {
+  background-color: darkblue;
+}
