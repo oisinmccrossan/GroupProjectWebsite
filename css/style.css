@@ -61,37 +61,36 @@ video {
     width: 100%;
   }
 
-.content {
-  padding-top: 150px;
-  text-align: center;
-}
-
-.content p {
-  font-size: 3vw;
-  color: #32CD32;
-  margin-bottom: 20px;
-  text-align: center;
-  transition: 0.5s;
-  -webkit-text-stroke: 0.5px black;
-}
-
-.content p:hover {
-  -webkit-text-stroke: 2px #fff;
-  color: transparent;
-}
-
-.content h1 {
-  font-size: 6vw;
-  color: #fff;
-  -webkit-text-stroke: 2px #fff;
-  font-weight: 600;
-  transition: 0.5s;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #fff;
-}
-
-.content h1:hover {
-  -webkit-text-stroke: 2px #fff;
-  color: transparent;
-}
-
+  .home-page .content {
+    padding-top: 150px;
+    text-align: center;
+  }
+  
+  .home-page .content p {
+    font-size: 3vw;
+    color: #32CD32;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: 0.5s;
+    -webkit-text-stroke: 0.5px black;
+  }
+  
+  .home-page .content p:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+  }
+  
+  .home-page .content h1 {
+    font-size: 6vw;
+    color: #fff;
+    -webkit-text-stroke: 2px #fff;
+    font-weight: 600;
+    transition: 0.5s;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+  }
+  
+  .home-page .content h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+  }
