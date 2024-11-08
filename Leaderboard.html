@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ocean Pollution Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/javascript.js" defer></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+        // TODO: Add other Firebase products as needed, such as authentication or storage
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDPW_1c2bQx70gU_YDY1Bk54-o9OlSRxMU",
+          authDomain: "groupproject-6fe29.firebaseapp.com",
+          projectId: "groupproject-6fe29",
+          storageBucket: "groupproject-6fe29.firebasestorage.app",
+          messagingSenderId: "298463974588",
+          appId: "1:298463974588:web:eb43e45d1b285bb7226cb9",
+          measurementId: "G-RWHJBX82B2"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      
+        // Initialize Firestore (or Realtime Database as needed)
+        const db = getFirestore(app);
+      
+        // Example: Function to read data from Firestore
+        async function fetchData() {
+          const querySnapshot = await getDocs(collection(db, "GroupProject"));
+          querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} =>`, doc.data());
+          });
+        }
+      
+        // Call fetchData to read data on page load
+        fetchData();
+      </script>
+      
+
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Game.html">Game</a></li>
+                <li><a href="App.html">App</a></li>
+                <li><a href="Info.html">Info</a></li>
+                <li><a href="Links.html">Links</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Leaderboard.html">Leaderboard</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Ocean Pollution Game</h1>
+            <p>Learn about ocean pollution and how to prevent it through this interactive game.</p>
+            <!-- Add game content here -->
+        </div>
+    </div>
+    <h1>Leaderboard</h1>
+    <div id="leaderboard"></div>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+[debug] [2024-11-08T17:16:49.400Z] ----------------------------------------------------------------------
+[debug] [2024-11-08T17:16:49.403Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-11-08T17:16:49.403Z] CLI Version:   13.24.2
+[debug] [2024-11-08T17:16:49.403Z] Platform:      win32
+[debug] [2024-11-08T17:16:49.404Z] Node Version:  v22.11.0
+[debug] [2024-11-08T17:16:49.404Z] Time:          Fri Nov 08 2024 17:16:49 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-11-08T17:16:49.404Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-08T17:16:49.411Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-08T17:16:49.411Z] > authorizing via signed-in user (oisinmccrossan@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\oisin\OneDrive - Atlantic TU\4th Year\GroupProject\GroupProjectWebsite
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-11-08T17:17:03.009Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:17:03.009Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:17:03.010Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-11-08T17:17:03.515Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-11-08T17:17:03.515Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project groupproject-6fe29 (GroupProject) 
+[info] 
+=== Hosting Setup
+[debug] [2024-11-08T17:17:04.606Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:17:04.606Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:17:04.606Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/groupproject-6fe29 [none]
+[debug] [2024-11-08T17:17:04.918Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/groupproject-6fe29 200
+[debug] [2024-11-08T17:17:04.918Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/groupproject-6fe29 {"projectId":"groupproject-6fe29","projectNumber":"298463974588","displayName":"GroupProject","name":"projects/groupproject-6fe29","resources":{"hostingSite":"groupproject-6fe29"},"state":"ACTIVE","etag":"1_02692390-b26b-4d18-877a-470081f12d8b"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-11-08T17:17:24.768Z] Error: Path contains invalid characters: C:\Users\oisin\OneDrive - Atlantic TU\4th Year\GroupProject\GroupProjectWebsite\C:\Users\oisin\OneDrive - Atlantic TU\4th Year\GroupProject\GroupProjectWebsite
+    at checkPath (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\mkdirs\utils.js:16:21)
+    at module.exports.makeDirSync (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\mkdirs\make-dir.js:21:3)
+    at Object.createFileSync (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:59:45)
+    at Config.writeProjectFile (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:159:12)
+    at C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:193:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async doSetup (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:173:13)
+    at async init (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:41:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-11-08T17:17:40.690Z] ----------------------------------------------------------------------
+[debug] [2024-11-08T17:17:40.693Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-11-08T17:17:40.693Z] CLI Version:   13.24.2
+[debug] [2024-11-08T17:17:40.693Z] Platform:      win32
+[debug] [2024-11-08T17:17:40.693Z] Node Version:  v22.11.0
+[debug] [2024-11-08T17:17:40.694Z] Time:          Fri Nov 08 2024 17:17:40 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-11-08T17:17:40.694Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-08T17:17:40.700Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-08T17:17:40.701Z] > authorizing via signed-in user (oisinmccrossan@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\oisin\OneDrive - Atlantic TU\4th Year\GroupProject\GroupProjectWebsite
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-11-08T17:17:45.968Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:17:45.969Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:17:45.970Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-11-08T17:17:46.422Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-11-08T17:17:46.423Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project groupproject-6fe29 (GroupProject) 
+[info] 
+=== Hosting Setup
+[debug] [2024-11-08T17:17:48.012Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:17:48.012Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:17:48.012Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/groupproject-6fe29 [none]
+[debug] [2024-11-08T17:17:48.178Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/groupproject-6fe29 200
+[debug] [2024-11-08T17:17:48.178Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/groupproject-6fe29 {"projectId":"groupproject-6fe29","projectNumber":"298463974588","displayName":"GroupProject","name":"projects/groupproject-6fe29","resources":{"hostingSite":"groupproject-6fe29"},"state":"ACTIVE","etag":"1_02692390-b26b-4d18-877a-470081f12d8b"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-11-08T17:18:02.915Z] ----------------------------------------------------------------------
+[debug] [2024-11-08T17:18:02.917Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-11-08T17:18:02.917Z] CLI Version:   13.24.2
+[debug] [2024-11-08T17:18:02.917Z] Platform:      win32
+[debug] [2024-11-08T17:18:02.917Z] Node Version:  v22.11.0
+[debug] [2024-11-08T17:18:02.918Z] Time:          Fri Nov 08 2024 17:18:02 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-11-08T17:18:02.918Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-08T17:18:02.924Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-08T17:18:02.925Z] > authorizing via signed-in user (oisinmccrossan@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\oisin\OneDrive - Atlantic TU\4th Year\GroupProject\GroupProjectWebsite
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-11-08T17:18:07.660Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:18:07.660Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:18:07.661Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-11-08T17:18:08.261Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-11-08T17:18:08.261Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project groupproject-6fe29 (GroupProject) 
+[info] 
+=== Hosting Setup
+[debug] [2024-11-08T17:18:08.986Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:18:08.986Z] Checked if tokens are valid: true, expires at: 1731089528595
+[debug] [2024-11-08T17:18:08.986Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/groupproject-6fe29 [none]
+[debug] [2024-11-08T17:18:09.271Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/groupproject-6fe29 200
+[debug] [2024-11-08T17:18:09.271Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/groupproject-6fe29 {"projectId":"groupproject-6fe29","projectNumber":"298463974588","displayName":"GroupProject","name":"projects/groupproject-6fe29","resources":{"hostingSite":"groupproject-6fe29"},"state":"ACTIVE","etag":"1_02692390-b26b-4d18-877a-470081f12d8b"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-11-08T17:19:26.632Z] Error: Path contains invalid characters: C:\Users\oisin\OneDrive - Atlantic TU\4th Year\GroupProject\GroupProjectWebsite\C:\Users\oisin\OneDrive - Atlantic TU\4th Year\GroupProject\GroupProjectWebsite
+    at checkPath (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\mkdirs\utils.js:16:21)
+    at module.exports.makeDirSync (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\mkdirs\make-dir.js:21:3)
+    at Object.createFileSync (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:59:45)
+    at Config.writeProjectFile (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:159:12)
+    at C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:193:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async doSetup (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:173:13)
+    at async init (C:\Users\oisin\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:41:9)
+[error] 
+[error] Error: An unexpected error has occurred.
