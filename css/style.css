@@ -94,3 +94,55 @@ video {
     -webkit-text-stroke: 2px #fff;
     color: transparent;
   }
+
+ /* Leaderboard table styling */
+table#leaderboard {
+  width: 60%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table#leaderboard th, table#leaderboard td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Header styling */
+table#leaderboard thead th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+/* Row styling */
+table#leaderboard tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table#leaderboard tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Hover effect on rows */
+table#leaderboard tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Center align the rank column */
+table#leaderboard tbody td:first-child {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Header title styling */
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  font-size: 2em;
+  margin-top: 20px;
+}

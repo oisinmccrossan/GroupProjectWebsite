@@ -5,13 +5,6 @@
     <title>Ocean Pollution Game</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/javascript.js"></script>
-
-    <!-- Firebase SDK scripts -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-
-      
-
 </head>
 
 <body>
@@ -27,14 +20,22 @@
                 <li><a href="Leaderboard.html">Leaderboard</a></li>
             </ul>
         </div>
-        <div class="content">
-            <h1>Ocean Pollution Game</h1>
-            <p>Learn about ocean pollution and how to prevent it through this interactive game.</p>
-            <!-- Add game content here -->
-        </div>
-    </div>
+        
+
     <h1>Leaderboard</h1>
-    <div id="leaderboard"></div>
+    <table id="leaderboard">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamic leaderboard entries will be inserted here -->
+        </tbody>
+    </table>
 </body>
 
 </html>
