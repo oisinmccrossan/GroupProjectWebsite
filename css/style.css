@@ -146,3 +146,7 @@ h1 {
   font-size: 2em;
   margin-top: 20px;
 }
+
+body {
+  background-color: navy;
+}
