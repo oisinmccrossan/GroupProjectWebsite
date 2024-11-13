@@ -113,7 +113,7 @@ table#leaderboard th, table#leaderboard td {
 
 /* Header styling */
 table#leaderboard thead th {
-  background-color: #4CAF50;
+  background-color: lightblue;
   color: white;
   font-weight: bold;
 }
@@ -142,7 +142,7 @@ table#leaderboard tbody td:first-child {
 h1 {
   text-align: center;
   font-family: Arial, sans-serif;
-  color: #333;
+  color: cyan;
   font-size: 2em;
   margin-top: 20px;
 }
