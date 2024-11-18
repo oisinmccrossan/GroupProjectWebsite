@@ -151,3 +151,47 @@ h1 {
   body {
     background-color: #0d0d30; /* Dark navy color */
   }
+
+
+  .content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.product button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}

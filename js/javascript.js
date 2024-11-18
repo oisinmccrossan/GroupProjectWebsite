@@ -32,6 +32,9 @@ get(child(playerInfoRef, '/')).then((snapshot) => {
             players.push(playerData);
         });
 
+
+
+
         // Sort players by score in descending order
         players.sort((a, b) => b.score - a.score);
 
