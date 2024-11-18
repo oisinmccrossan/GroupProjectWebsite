@@ -179,7 +179,7 @@ h1 {
 
 .product p {
     font-size: 1.2em;
-    color: #333;
+    color: white;
 }
 
 .product button {
@@ -194,4 +194,57 @@ h1 {
     margin: 10px 0;
     cursor: pointer;
     border-radius: 4px;
+}
+
+
+/* Center the shop content */
+.shop-content {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Style each product */
+.product {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+  vertical-align: top;
+  background-color: #f9f9f9;
+}
+
+/* Ensure images fit within the product container */
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the product title */
+.product h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+/* Style the product price */
+.product p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Style the add to cart button */
+.product button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 4px;
 }
