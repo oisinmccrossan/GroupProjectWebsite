@@ -248,3 +248,96 @@ h1 {
   cursor: pointer;
   border-radius: 4px;
 }
+
+/* Add this to your existing CSS file */
+
+/* Ensure the banner and navbar are properly positioned */
+.banner {
+  width: 100%;
+  height: auto; /* Change from 100vh to auto */
+  position: relative; /* Ensure it doesn't overlap other content */
+  z-index: 1; /* Ensure it is above the video */
+}
+
+.video-wrapper {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1; /* Ensure it is behind other content */
+}
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Ensure it doesn't overlap other content */
+  z-index: 2; /* Ensure it is above the video */
+}
+
+/* Clear floats and ensure the content is positioned correctly */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Center the shop content */
+.shop-content {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 1200px;
+  padding-top: 20px; /* Add padding to ensure it is below the navbar */
+}
+
+/* Style each product */
+.product {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+  vertical-align: top;
+  background-color: #fff;
+}
+
+/* Ensure images fit within the product container */
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the product title */
+.product h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+/* Style the product price */
+.product p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Style the add to cart button */
+.product button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
