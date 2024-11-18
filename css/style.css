@@ -183,7 +183,7 @@ h1 {
 }
 
 .product button {
-    background-color: #4CAF50; /* Green */
+    background-color: cyan; /* Green */
     border: none;
     color: white;
     padding: 10px 20px;
@@ -231,12 +231,12 @@ h1 {
 /* Style the product price */
 .product p {
   font-size: 1.2em;
-  color: #333;
+  color: white;
 }
 
 /* Style the add to cart button */
 .product button {
-  background-color: #4CAF50; /* Green */
+  background-color: cyan; /* Green */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -339,4 +339,9 @@ h1 {
   margin: 10px 0;
   cursor: pointer;
   border-radius: 4px;
+}
+
+/* Style for the shop introduction text */
+.shop-intro {
+  color: white;
 }
