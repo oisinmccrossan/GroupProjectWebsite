@@ -28,6 +28,23 @@
         <p>Total: €<span id="cart-total">0.00</span></p>
         <button onclick="checkout()">Checkout</button>
     </div>
+
+    <div class="payment-form">
+        <h2>Payment Information</h2>
+        <form id="payment-form" onsubmit="processPayment(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required><br><br>
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" name="expiry-date" required><br><br>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required><br><br>
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
 </body>
 
 </html>
