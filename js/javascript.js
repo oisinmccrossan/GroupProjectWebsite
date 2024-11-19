@@ -53,14 +53,15 @@ get(child(playerInfoRef, '/')).then((snapshot) => {
 });
 
 // Shopping cart functionality
-let cart = [];
-let total = 0;
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let total = cart.reduce((sum, item) => sum + item.price, 0);
 
 window.addToCart = function(product, price) {
     console.log(`Adding to cart: ${product} - €${price}`);
     cart.push({ product, price });
     total += price;
     console.log(`New total: €${total}`);
+    localStorage.setItem('cart', JSON.stringify(cart));
     updateCart();
 }
 
@@ -68,13 +69,18 @@ function updateCart() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
 
-    cartItems.innerHTML = '';
-    cart.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.product} - €${item.price.toFixed(2)}`;
-        cartItems.appendChild(li);
-    });
+    if (cartItems && cartTotal) {
+        cartItems.innerHTML = '';
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.product} - €${item.price.toFixed(2)}`;
+            cartItems.appendChild(li);
+        });
 
-    cartTotal.textContent = total.toFixed(2);
-    console.log(`Cart updated. Total: €${total}`);
+        cartTotal.textContent = total.toFixed(2);
+        console.log(`Cart updated. Total: €${total}`);
+    }
 }
+
+// Call updateCart on page load to display cart items if any
+updateCart();
