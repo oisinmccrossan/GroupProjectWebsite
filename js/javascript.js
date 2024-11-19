@@ -32,9 +32,6 @@ get(child(playerInfoRef, '/')).then((snapshot) => {
             players.push(playerData);
         });
 
-
-
-
         // Sort players by score in descending order
         players.sort((a, b) => b.score - a.score);
 
@@ -55,15 +52,15 @@ get(child(playerInfoRef, '/')).then((snapshot) => {
     console.error("Error fetching data: ", error);
 });
 
-
-// FILE: js/javascript.js
-
+// Shopping cart functionality
 let cart = [];
 let total = 0;
 
-function addToCart(product, price) {
+window.addToCart = function(product, price) {
+    console.log(`Adding to cart: ${product} - €${price}`);
     cart.push({ product, price });
     total += price;
+    console.log(`New total: €${total}`);
     updateCart();
 }
 
@@ -79,4 +76,5 @@ function updateCart() {
     });
 
     cartTotal.textContent = total.toFixed(2);
+    console.log(`Cart updated. Total: €${total}`);
 }
