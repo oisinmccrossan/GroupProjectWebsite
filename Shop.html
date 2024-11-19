@@ -4,6 +4,7 @@
 <head>
     <title>Ocean Pollution Game - Shop</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/javascript.js" defer></script> <!-- Link to your existing JavaScript file -->
 </head>
 
 <body>
@@ -27,23 +28,29 @@
         <div class="product">
             <img src="img/t-shirt.png" alt="T-Shirt">
             <h2>Ocean Pollution T-Shirt</h2>
-            <p>Price: € 20.00</p>
-            <button>Add to Cart</button>
+            <p>Price: €20.00</p>
+            <button onclick="addToCart('Ocean Pollution T-Shirt', 20)">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="img/mug.png" alt="Mug">
             <h2>Ocean Pollution Mug</h2>
             <p>Price: €10.00</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Ocean Pollution Mug', 10)">Add to Cart</button>
         </div>
 
         <div class="product">
             <img src="img/water_bottle.jpg" alt="Water Bottle">
             <h2>Reusable Water Bottle</h2>
             <p>Price: €15.00</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Reusable Water Bottle', 15)">Add to Cart</button>
         </div>
+    </div>
+
+    <div class="cart-content">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: €<span id="cart-total">0.00</span></p>
     </div>
 </body>
 
