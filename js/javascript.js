@@ -54,3 +54,29 @@ get(child(playerInfoRef, '/')).then((snapshot) => {
 }).catch((error) => {
     console.error("Error fetching data: ", error);
 });
+
+
+// FILE: js/javascript.js
+
+let cart = [];
+let total = 0;
+
+function addToCart(product, price) {
+    cart.push({ product, price });
+    total += price;
+    updateCart();
+}
+
+function updateCart() {
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+
+    cartItems.innerHTML = '';
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.product} - €${item.price.toFixed(2)}`;
+        cartItems.appendChild(li);
+    });
+
+    cartTotal.textContent = total.toFixed(2);
+}
