@@ -82,5 +82,14 @@ function updateCart() {
     }
 }
 
+// Simulate checkout process
+window.checkout = function() {
+    alert('Checkout successful! Thank you for your purchase.');
+    cart = [];
+    total = 0;
+    localStorage.removeItem('cart');
+    updateCart();
+}
+
 // Call updateCart on page load to display cart items if any
 updateCart();
