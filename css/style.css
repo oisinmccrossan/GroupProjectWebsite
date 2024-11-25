@@ -417,3 +417,85 @@ h1 {
 .payment-form button:hover {
   background-color: #45a049;
 }
+
+/* Game page specific styles */
+.game-page .banner {
+  background-image: url('img/banner.jpg'); /* Placeholder image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding-top: 60px; /* Adjust for fixed header */
+}
+
+.game-page .banner .content {
+  max-width: 800px;
+}
+
+.game-page .banner h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.game-page .banner p {
+  font-size: 1.5em;
+}
+
+.game-page .main-content {
+  padding: 40px 0;
+  margin-top: 100vh; /* Ensure it starts below the banner */
+}
+
+.game-page .main-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.game-page .main-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.game-page .main-content ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.game-page .main-content ul li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.game-page footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.game-page footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.game-page footer ul li {
+  margin: 0 10px;
+}
+
+.game-page footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.game-page footer ul li a:hover {
+  color: #14b4c9;
+}
