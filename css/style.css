@@ -426,10 +426,10 @@ h1 {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Align items to the top */
   text-align: center;
   color: white;
-  padding-top: 60px; /* Adjust for fixed header */
+  padding-top: 100px; /* Adjust for fixed header */
 }
 
 .game-page .banner .content {
@@ -447,19 +447,18 @@ h1 {
 
 .game-page .main-content {
   padding: 40px 0;
-  margin-top: 100vh; /* Ensure it starts below the banner */
+  background-color: #f9f9f9;
+  margin-top: 0; /* Ensure it starts below the banner */
 }
 
 .game-page .main-content h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: white;
 }
 
 .game-page .main-content p {
   font-size: 1.2em;
   margin-bottom: 20px;
-  color: white;
 }
 
 .game-page .main-content ul {
@@ -470,7 +469,6 @@ h1 {
 .game-page .main-content ul li {
   font-size: 1.2em;
   margin-bottom: 10px;
-  color: white;
 }
 
 .game-page footer {
