@@ -419,7 +419,6 @@ h1 {
 }
 
 /* Game page specific styles */
-/* Game page specific styles */
 .game-page .banner {
   position: relative;
   height: 100vh;
@@ -449,6 +448,21 @@ h1 {
   max-width: 800px;
   margin-top: 20px; /* Add margin to create space below the navbar */
   z-index: 1; /* Ensure the content box is above the background image */
+}
+
+.game-page .content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.game-page .video {
+  flex: 1;
+}
+
+.game-page .text {
+  flex: 1;
+  text-align: right;
+  padding-left: 20px;
 }
 
 .game-page .banner .content {
