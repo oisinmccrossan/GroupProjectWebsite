@@ -461,12 +461,13 @@ h1 {
 
 .game-page .text {
   flex: 1;
-  text-align: right;
+  text-align: left; /* Align text to the left */
   padding-left: 20px;
 }
 
 .game-page .banner .content {
   max-width: 800px;
+  text-align: left; /* Align text to the left */
 }
 
 .game-page .banner h1 {
@@ -479,9 +480,12 @@ h1 {
 }
 
 .game-page .main-content {
-  padding: 40px 0;
-  background-color: #f9f9f9;
-  margin-top: 0; /* Ensure it starts below the banner */
+  padding: 20px 0;
+  background-color: rgba(0, 0, 139, 0.8); /* Navy blue with transparency */
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left; /* Align text to the left */
 }
 
 .game-page .main-content h2 {
