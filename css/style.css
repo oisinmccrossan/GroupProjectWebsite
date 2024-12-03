@@ -6,40 +6,16 @@
   font-family: sans-serif;
 }
 
-video {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.banner {
-  width: 100%;
-  height: 100vh;
-}
-
-.video-wrapper {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
 /* Navbar styling */
 .navbar {
-  width: 85%;
+  width: 100%; /* Ensure the navbar spans the full width of the page */
   background-color: transparent;
-  margin: auto;
+  margin: 0; /* Remove margin */
   padding: 35px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute; /* Ensure the navbar is positioned on top of the background image */
+  position: fixed; /* Change from absolute to fixed */
   top: 0;
   left: 0;
   right: 0;
@@ -82,63 +58,34 @@ video {
   width: 100%;
 }
 
+/* Navbar background for all pages except home page */
+body:not(.home-page) .navbar {
+  background-color: cyan; /* Set background color to cyan for all pages except the home page */
+}
+
 /* Game page specific styles */
-.game-page .banner {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding-top: 100px; /* Adjust for fixed header */
-  overflow: hidden;
-  background-image: url('img/background.jpg'); /* Set background image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Make background image fixed */
-}
-
-.game-page .background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* Ensure the image is behind the content */
-}
-
 .game-page .container {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.game-page .intro,
+.game-page .game-demo,
 .game-page .game-info {
-  margin-bottom: 40px;
-}
-
-.game-page .game-demo {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically center the text with the video or image */
   margin-bottom: 40px;
 }
 
-.game-page .video-wrapper {
+.game-page .video-wrapper,
+.game-page .game-info img {
   flex: 1;
 }
 
-.game-page .video-text {
+.game-page .video-text,
+.game-page .text {
   flex: 1;
   padding-left: 20px;
-}
-
-.game-page .game-info img {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
 }
 
 .game-page footer {
@@ -167,55 +114,10 @@ video {
 .game-page footer ul li a:hover {
   color: #14b4c9;
 }
-  
-  /* Home page specific styles */
-.home-page .banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  height: 100vh; /* Ensure the banner takes up the full height of the viewport */
-  background-image: url('img/background.jpg'); /* Set background image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Make background image fixed */
-}
 
-.home-page .content {
-  text-align: center;
-}
 
-.home-page .content p {
-  font-size: 3vw;
-  color: #32CD32;
-  margin-bottom: 20px;
-  text-align: center;
-  transition: 0.5s;
-  -webkit-text-stroke: 0.5px black;
-}
 
-.home-page .content p:hover {
-  -webkit-text-stroke: 2px #fff;
-  color: transparent;
-}
-
-.home-page .content h1 {
-  font-size: 6vw;
-  color: #fff;
-  -webkit-text-stroke: 2px #fff;
-  font-weight: 600;
-  transition: 0.5s;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #fff;
-}
-
-.home-page .content h1:hover {
-  -webkit-text-stroke: 2px #fff;
-  color: transparent;
-}
-
- /* Leaderboard table styling */
+/* Leaderboard table styling */
 table#leaderboard {
   width: 60%;
   margin: 20px auto;
@@ -267,139 +169,7 @@ h1 {
   margin-top: 20px;
 }
 
-
-  /*body {
-    background-color: #0d0d30; /* Dark navy color 
-} */
-
-
-  .content {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.product {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 200px;
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-}
-
-.product h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.product p {
-    font-size: 1.2em;
-    color: white;
-}
-
-.product button {
-    background-color: cyan; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-
-/* Center the shop content */
-.shop-content {
-  text-align: center;
-  margin: 20px auto;
-  max-width: 1200px;
-}
-
-/* Style each product */
-.product {
-  display: inline-block;
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 200px;
-  vertical-align: top;
-  background-color: #f9f9f9;
-}
-
-/* Ensure images fit within the product container */
-.product img {
-  width: 100%;
-  height: auto;
-}
-
-/* Style the product title */
-.product h2 {
-  font-size: 1.5em;
-  margin: 10px 0;
-}
-
-/* Style the product price */
-.product p {
-  font-size: 1.2em;
-  color: white;
-}
-
-/* Style the add to cart button */
-.product button {
-  background-color: cyan; /* Green */
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 0;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-
-/* Ensure the banner and navbar are properly positioned */
-.banner {
-  width: 100%;
-  height: auto; /* Change from 100vh to auto */
-  position: relative; /* Ensure it doesn't overlap other content */
-  z-index: 1; /* Ensure it is above the video */
-}
-
-.video-wrapper {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1; /* Ensure it is behind other content */
-}
-
-
-
-/* Clear floats and ensure the content is positioned correctly */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Center the shop content */
+/* Shop content styling */
 .shop-content {
   text-align: center;
   margin: 20px auto;
@@ -456,7 +226,6 @@ h1 {
 .shop-intro {
   color: white;
 }
-
 
 /* Style for the cart icon */
 .cart-icon {
@@ -528,4 +297,3 @@ h1 {
 .payment-form button:hover {
   background-color: #45a049;
 }
-

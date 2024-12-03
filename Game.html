@@ -4,11 +4,12 @@
 <head>
     <title>Ocean Pollution Game</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(), clipboard-write=(), encrypted-media=(), gyroscope=(), picture-in-picture=()">
 </head>
 
-<body class="game-page">
+<body>
     <header>
         <div class="navbar">
             <ul>
@@ -23,38 +24,52 @@
         </div>
     </header>
 
-    <div class="banner">
-        <img src="img/background.jpg" alt="Background Image" class="background-image">
-    </div>
+    <div class="game-page">
+        <div class="banner">
+            <div class="container mt-5">
+                <section class="game-demo row align-items-center mb-5">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div>
+                            <h2>Game Demo</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <video width="100%" controls>
+                            <source src="videos/GameDemo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </section>
 
-    <div class="container">
-        <section class="intro">
-            <h1>Welcome to the Ocean Pollution Game</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </section>
+                <section class="game-info row align-items-center mb-5">
+                    <div class="col-md-6 order-md-2">
+                        <img src="img/t-sh.png" alt="Game Screenshot 1" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 order-md-1 d-flex align-items-center">
+                        <div>
+                            <h2>About the Game</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </section>
 
-        <section class="game-demo">
-            <div class="video-wrapper">
-                <video width="560" height="315" controls>
-                    <source src="videos/GameDemo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <section class="game-info row align-items-center mb-5">
+                    <div class="col-md-6">
+                        <img src="img/t-shirt.png" alt="Game Screenshot 2" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div>
+                            <h2>Game Features</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="video-text">
-                <h2>Game Demo</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        </section>
-
-        <section class="game-info">
-            <h2>About the Game</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <img src="img/game-screenshot1.jpg" alt="Game Screenshot 1" class="game-image">
-            <img src="img/game-screenshot2.jpg" alt="Game Screenshot 2" class="game-image">
-        </section>
+        </div>
     </div>
 
     <footer>
@@ -67,6 +82,10 @@
             </ul>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
