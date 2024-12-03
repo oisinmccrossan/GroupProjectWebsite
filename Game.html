@@ -4,6 +4,8 @@
 <head>
     <title>Ocean Pollution Game</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), autoplay=(), clipboard-write=(), encrypted-media=(), gyroscope=(), picture-in-picture=()">
 </head>
 
 <body class="game-page">
@@ -23,32 +25,36 @@
 
     <div class="banner">
         <img src="img/background.jpg" alt="Background Image" class="background-image">
-        <div class="content-box">
-            <div class="content">
-                <h1>Ocean Pollution Game</h1>
-                <div class="content-wrapper">
-                    <div class="video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/BtP8r8nRfko?si=rDb6yR5nyo0ZMjvK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="text">
-                        <h2>About the Game</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="main-content">
-                    <h2>About the Game</h2>
-                    <p>This is a placeholder text for the game description. Here you can provide details about the game, its features, and how to play.</p>
-                    <h2>Features</h2>
-                    <ul>
-                        <li>Interactive gameplay</li>
-                        <li>Educational content</li>
-                        <li>Engaging storyline</li>
-                        <li>Beautiful graphics</li>
-                    </ul>
-                </div>
+    </div>
+
+    <div class="container">
+        <section class="intro">
+            <h1>Welcome to the Ocean Pollution Game</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </section>
+
+        <section class="game-demo">
+            <div class="video-wrapper">
+                <video width="560" height="315" controls>
+                    <source src="videos/GameDemo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-        </div>
+            <div class="video-text">
+                <h2>Game Demo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+
+        <section class="game-info">
+            <h2>About the Game</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img src="img/game-screenshot1.jpg" alt="Game Screenshot 1" class="game-image">
+            <img src="img/game-screenshot2.jpg" alt="Game Screenshot 2" class="game-image">
+        </section>
     </div>
 
     <footer>

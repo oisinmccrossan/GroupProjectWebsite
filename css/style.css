@@ -1,100 +1,219 @@
+/* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  font-family: sans-serif;
 }
+
 video {
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  .banner{
-    width:100%;
-    height: 100vh;
-  }
-  .video-wrapper {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  .navbar{
-    width: 85%;
-    background-color: transparent;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
-  .navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-  }
-  
-  .navbar ul li a {
-    text-decoration: none;
-    color: #14b4c9;
-    text-transform: uppercase;
-  }
+.banner {
+  width: 100%;
+  height: 100vh;
+}
 
-  .navbar ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position:absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-  }
+.video-wrapper {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 
-  .navbar ul li:hover::after{
-    width: 100%;
-  }
+/* Navbar styling */
+.navbar {
+  width: 85%;
+  background-color: transparent;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute; /* Ensure the navbar is positioned on top of the background image */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
 
-  .home-page .content {
-    padding-top: 150px;
-    text-align: center;
-  }
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #14b4c9;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+/* Game page specific styles */
+.game-page .banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding-top: 100px; /* Adjust for fixed header */
+  overflow: hidden;
+  background-image: url('img/background.jpg'); /* Set background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Make background image fixed */
+}
+
+.game-page .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure the image is behind the content */
+}
+
+.game-page .container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game-page .intro,
+.game-page .game-info {
+  margin-bottom: 40px;
+}
+
+.game-page .game-demo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.game-page .video-wrapper {
+  flex: 1;
+}
+
+.game-page .video-text {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.game-page .game-info img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.game-page footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: left; /* Align text to the left */
+}
+
+.game-page footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  margin-top: 10px;
+}
+
+.game-page footer ul li {
+  margin: 0 10px;
+}
+
+.game-page footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.game-page footer ul li a:hover {
+  color: #14b4c9;
+}
   
-  .home-page .content p {
-    font-size: 3vw;
-    color: #32CD32;
-    margin-bottom: 20px;
-    text-align: center;
-    transition: 0.5s;
-    -webkit-text-stroke: 0.5px black;
-  }
-  
-  .home-page .content p:hover {
-    -webkit-text-stroke: 2px #fff;
-    color: transparent;
-  }
-  
-  .home-page .content h1 {
-    font-size: 6vw;
-    color: #fff;
-    -webkit-text-stroke: 2px #fff;
-    font-weight: 600;
-    transition: 0.5s;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #fff;
-  }
-  
-  .home-page .content h1:hover {
-    -webkit-text-stroke: 2px #fff;
-    color: transparent;
-  }
+  /* Home page specific styles */
+.home-page .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 100vh; /* Ensure the banner takes up the full height of the viewport */
+  background-image: url('img/background.jpg'); /* Set background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Make background image fixed */
+}
+
+.home-page .content {
+  text-align: center;
+}
+
+.home-page .content p {
+  font-size: 3vw;
+  color: #32CD32;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: 0.5s;
+  -webkit-text-stroke: 0.5px black;
+}
+
+.home-page .content p:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+
+.home-page .content h1 {
+  font-size: 6vw;
+  color: #fff;
+  -webkit-text-stroke: 2px #fff;
+  font-weight: 600;
+  transition: 0.5s;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.home-page .content h1:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
 
  /* Leaderboard table styling */
 table#leaderboard {
@@ -410,123 +529,3 @@ h1 {
   background-color: #45a049;
 }
 
-
-
-
-
-/* Game page specific styles */
-.game-page .banner {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding-top: 100px; /* Adjust for fixed header */
-  overflow: hidden;
-}
-
-.game-page .background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* Ensure the image is behind the content */
-}
-
-.game-page .content-box {
-  background-color: rgba(0, 0, 139, 0.8); /* Navy blue with transparency */
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  margin-top: 20px; /* Add margin to create space below the navbar */
-  z-index: 1; /* Ensure the content box is above the background image */
-}
-
-.game-page .content-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.game-page .video {
-  flex: 1;
-}
-
-.game-page .text {
-  flex: 1;
-  text-align: left; /* Align text to the left */
-  padding-left: 20px;
-}
-
-.game-page .banner .content {
-  max-width: 800px;
-  text-align: left; /* Align text to the left */
-}
-
-.game-page .banner h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.game-page .banner p {
-  font-size: 1.5em;
-}
-
-.game-page .main-content {
-  padding: 20px 0;
-  background-color: rgba(0, 0, 139, 0.8); /* Navy blue with transparency */
-  color: white;
-  border-radius: 10px;
-  margin-top: 20px;
-  text-align: left; /* Align text to the left */
-}
-
-.game-page .main-content h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.game-page .main-content p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.game-page .main-content ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.game-page .main-content ul li {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.game-page footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.game-page footer ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.game-page footer ul li {
-  margin: 0 10px;
-}
-
-game-page footer ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.game-page footer ul li a:hover {
-  color: #14b4c9;
-}
