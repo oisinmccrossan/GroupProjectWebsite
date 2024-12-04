@@ -64,6 +64,10 @@ body:not(.home-page) .navbar {
 }
 
 /* Game page specific styles */
+.game-page {
+  padding-top: 100px; /* Add top padding to account for the height of the fixed navbar */
+}
+
 .game-page .container {
   padding: 20px;
   max-width: 1200px;
@@ -115,7 +119,52 @@ body:not(.home-page) .navbar {
   color: #14b4c9;
 }
 
+/* Home page specific styles */
+.home-page .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 100vh; /* Ensure the banner takes up the full height of the viewport */
+  background-image: url('img/background.jpg'); /* Set background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Make background image fixed */
+}
 
+.home-page .content {
+  text-align: center;
+}
+
+.home-page .content p {
+  font-size: 3vw;
+  color: #32CD32;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: 0.5s;
+  -webkit-text-stroke: 0.5px black;
+}
+
+.home-page .content p:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+
+.home-page .content h1 {
+  font-size: 6vw;
+  color: #fff;
+  -webkit-text-stroke: 2px #fff;
+  font-weight: 600;
+  transition: 0.5s;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.home-page .content h1:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
 
 /* Leaderboard table styling */
 table#leaderboard {
