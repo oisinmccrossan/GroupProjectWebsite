@@ -63,6 +63,11 @@ body:not(.home-page) .navbar {
   background-color: cyan; /* Set background color to cyan for all pages except the home page */
 }
 
+.navbar img {
+  height: 50px; /* Adjust the height as needed */
+  margin-left: 20px; /* Add margin to the left */
+}
+
 /* Game page specific styles */
 .game-page {
   padding-top: 100px; /* Add top padding to account for the height of the fixed navbar */
@@ -363,6 +368,27 @@ h1 {
 }
 
 .video-text {
+  flex: 1; /* Ensure the paragraph takes up an even amount of space */
+  padding-left: 20px;
+  color: #333; /* Add text color */
+}
+
+/* Image and text container styling */
+.image-text-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #f9f9f9; /* Add background color */
+  padding: 20px; /* Add padding */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.image-text-container img {
+  flex: 1; /* Ensure the image takes up an even amount of space */
+}
+
+.image-text {
   flex: 1; /* Ensure the paragraph takes up an even amount of space */
   padding-left: 20px;
   color: #333; /* Add text color */
