@@ -346,3 +346,24 @@ h1 {
 .payment-form button:hover {
   background-color: #45a049;
 }
+
+/* Video and text container styling */
+.video-text-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #f9f9f9; /* Add background color */
+  padding: 20px; /* Add padding */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.video-text-container video {
+  flex: 1; /* Ensure the video takes up an even amount of space */
+}
+
+.video-text {
+  flex: 1; /* Ensure the paragraph takes up an even amount of space */
+  padding-left: 20px;
+  color: #333; /* Add text color */
+}
