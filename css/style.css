@@ -314,3 +314,34 @@ footer ul li a {
 footer ul li a:hover {
   color: #14b4c9;
 }
+
+.app-image-text-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #f9f9f9; /* Add background color */
+  padding: 20px; /* Add padding */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.app-image-text-container img {
+  max-width: 300px; /* Set a maximum width to make the images smaller */
+  max-height: 300px; /* Set a maximum height to make the images smaller */
+  object-fit: contain; /* Ensure the image retains its aspect ratio */
+  margin-right: 20px; /* Add margin to the right of the image */
+}
+
+.app-image-text {
+  flex: 1; /* Ensure the paragraph takes up the remaining space */
+  color: #333; /* Add text color */
+}
+
+/* Ensure app images retain their original size */
+.app-original-size {
+  width: auto;
+  height: auto;
+  max-width: 100%; /* Ensure images do not overflow their container */
+  max-height: 300px; /* Set a maximum height to make the images smaller */
+  object-fit: contain; /* Ensure the image retains its aspect ratio */
+}
