@@ -1,10 +1,11 @@
 // Import Firebase SDK functions
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
+    apiKey: "AIzaSyDPW_1c2bQx70gU_YDY1Bk54-o9OlSRxMU",
     authDomain: "groupproject-6fe29.firebaseapp.com",
     databaseURL: "https://groupproject-6fe29-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "groupproject-6fe29",
@@ -16,40 +17,50 @@ const firebaseConfig = {
 // Initialize Firebase and Database
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+const auth = getAuth(app);
 
-// Reference to player data
-const playerInfoRef = ref(db, 'playerinfo');
+// Authenticate user anonymously
+signInAnonymously(auth).catch((error) => {
+    console.error("Error signing in anonymously: ", error);
+});
 
-// Fetch data and display leaderboard
-get(child(playerInfoRef, '/')).then((snapshot) => {
-    if (snapshot.exists()) {
-        const leaderboardTable = document.getElementById('leaderboard').getElementsByTagName('tbody')[0];
-        const players = [];
+// Fetch data and display leaderboard once authenticated
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        const playerInfoRef = ref(db, 'playerinfo');
+        get(child(playerInfoRef, '/')).then((snapshot) => {
+            if (snapshot.exists()) {
+                const leaderboardTable = document.getElementById('leaderboard').getElementsByTagName('tbody')[0];
+                const players = [];
 
-        snapshot.forEach((childSnapshot) => {
-            const playerData = childSnapshot.val();
-            playerData.score = parseInt(playerData.score, 10); // Convert score to integer
-            players.push(playerData);
-        });
+                snapshot.forEach((childSnapshot) => {
+                    const playerData = childSnapshot.val();
+                    playerData.score = parseInt(playerData.score, 10); // Convert score to integer
+                    players.push(playerData);
+                });
 
-        // Sort players by score in descending order
-        players.sort((a, b) => b.score - a.score);
+                // Sort players by score in descending order
+                players.sort((a, b) => b.score - a.score);
 
-        // Display each player on the leaderboard
-        players.forEach((player, index) => {
-            const row = leaderboardTable.insertRow();
-            row.innerHTML = `
-                <td>${index + 1}</td>
-                <td>${player.name}</td>
-                <td>${player.score}</td>
-                <td>${player.age}</td>
-            `;
+                // Display each player on the leaderboard
+                players.forEach((player, index) => {
+                    const row = leaderboardTable.insertRow();
+                    row.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${player.name}</td>
+                        <td>${player.score}</td>
+                        <td>${player.age}</td>
+                    `;
+                });
+            } else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error("Error fetching data: ", error);
         });
     } else {
-        console.log("No data available");
+        console.log("User is signed out");
     }
-}).catch((error) => {
-    console.error("Error fetching data: ", error);
 });
 
 // Shopping cart functionality
