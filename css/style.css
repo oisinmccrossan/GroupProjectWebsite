@@ -9,7 +9,7 @@
 /* Navbar styling */
 .navbar {
   width: 100%; /* Ensure the navbar spans the full width of the page */
-  background-color: transparent;
+  background-color: cyan;
   margin: 0; /* Remove margin */
   padding: 35px 0;
   display: flex;
@@ -58,117 +58,9 @@
   width: 100%;
 }
 
-/* Navbar background for all pages except home page */
-body:not(.home-page) .navbar {
-  background-color: cyan; /* Set background color to cyan for all pages except the home page */
-}
-
-.navbar img {
-  height: 50px; /* Adjust the height as needed */
-  margin-left: 20px; /* Add margin to the left */
-}
-
-/* Game page specific styles */
-.game-page {
-  padding-top: 100px; /* Add top padding to account for the height of the fixed navbar */
-}
-
-.game-page .container {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.game-page .game-demo,
-.game-page .game-info {
-  display: flex;
-  align-items: center; /* Vertically center the text with the video or image */
-  margin-bottom: 40px;
-}
-
-.game-page .video-wrapper,
-.game-page .game-info img {
-  flex: 1;
-}
-
-.game-page .video-text,
-.game-page .text {
-  flex: 1;
-  padding-left: 20px;
-}
-
-.game-page footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: left; /* Align text to the left */
-}
-
-.game-page footer ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start; /* Align items to the left */
-  margin-top: 10px;
-}
-
-.game-page footer ul li {
-  margin: 0 10px;
-}
-
-.game-page footer ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.game-page footer ul li a:hover {
-  color: #14b4c9;
-}
-
-/* Home page specific styles */
-.home-page .banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  height: 100vh; /* Ensure the banner takes up the full height of the viewport */
-  background-image: url('img/background.jpg'); /* Set background image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Make background image fixed */
-}
-
-.home-page .content {
-  text-align: center;
-}
-
-.home-page .content p {
-  font-size: 3vw;
-  color: #32CD32;
-  margin-bottom: 20px;
-  text-align: center;
-  transition: 0.5s;
-  -webkit-text-stroke: 0.5px black;
-}
-
-.home-page .content p:hover {
-  -webkit-text-stroke: 2px #fff;
-  color: transparent;
-}
-
-.home-page .content h1 {
-  font-size: 6vw;
-  color: #fff;
-  -webkit-text-stroke: 2px #fff;
-  font-weight: 600;
-  transition: 0.5s;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #fff;
-}
-
-.home-page .content h1:hover {
-  -webkit-text-stroke: 2px #fff;
-  color: transparent;
+/* Add gap underneath the navbar */
+.content {
+  padding-top: 100px; /* Add padding to create a gap underneath the navbar */
 }
 
 /* Leaderboard table styling */
@@ -356,7 +248,7 @@ h1 {
 .video-text-container {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 40px; /* Add margin to create a gap above the first video and paragraph */
   background-color: #f9f9f9; /* Add background color */
   padding: 20px; /* Add padding */
   border-radius: 10px; /* Add border radius */
