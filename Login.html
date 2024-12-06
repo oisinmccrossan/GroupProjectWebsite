@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login - Ocean Pollution Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module">
+        // Import Firebase SDK functions
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDPW_1c2bQx70gU_YDY1Bk54-o9OlSRxMU",
+            authDomain: "groupproject-6fe29.firebaseapp.com",
+            databaseURL: "https://groupproject-6fe29-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "groupproject-6fe29",
+            storageBucket: "groupproject-6fe29.appspot.com",
+            messagingSenderId: "298463974588",
+            appId: "1:298463974588:web:eb43e45d1b285bb7226cb9",
+            measurementId: "G-RWHJBX82B2"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Login user
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    console.log('User logged in:', userCredential.user);
+                    alert('Login successful! Redirecting to leaderboard page.');
+                    window.location.href = 'Leaderboard.html'; // Redirect to leaderboard page after login
+                })
+                .catch((error) => {
+                    console.error('Error logging in user:', error);
+                    alert('Error logging in user: ' + error.message);
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Game.html">Game</a></li>
+            <li><a href="App.html">App</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="Register.html">Register here</a></p>
+    </div>
+</body>
+
+</html>

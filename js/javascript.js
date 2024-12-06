@@ -1,7 +1,7 @@
 // Import Firebase SDK functions
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
-import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -19,10 +19,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const auth = getAuth(app);
 
-// Authenticate user anonymously
-signInAnonymously(auth).catch((error) => {
-    console.error("Error signing in anonymously: ", error);
-});
+
 
 // Fetch data and display leaderboard once authenticated
 onAuthStateChanged(auth, (user) => {
