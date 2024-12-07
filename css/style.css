@@ -60,7 +60,7 @@
 
 /* Add gap underneath the navbar */
 .content {
-  padding-top: 100px; /* Add padding to create a gap underneath the navbar */
+  padding-top: 50px; /* Add padding to create a gap underneath the navbar */
 }
 
 /* Leaderboard table styling */
@@ -248,7 +248,6 @@ h1 {
 .video-text-container {
   display: flex;
   align-items: center;
-  margin-top: 40px; /* Add margin to create a gap above the first video and paragraph */
   background-color: #f9f9f9; /* Add background color */
   padding: 20px; /* Add padding */
   border-radius: 10px; /* Add border radius */
@@ -344,4 +343,16 @@ footer ul li a:hover {
   max-width: 100%; /* Ensure images do not overflow their container */
   max-height: 300px; /* Set a maximum height to make the images smaller */
   object-fit: contain; /* Ensure the image retains its aspect ratio */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; /* Adjust this value to control the space between the navbar and the logo */
+}
+
+.logo {
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Maintain aspect ratio */
 }
