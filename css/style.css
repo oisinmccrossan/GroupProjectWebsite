@@ -9,7 +9,7 @@
 /* Navbar styling */
 .navbar {
   width: 100%; /* Ensure the navbar spans the full width of the page */
-  background-color: cyan;
+  background-color: navy;
   margin: 0; /* Remove margin */
   padding: 35px 0;
   display: flex;
