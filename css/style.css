@@ -396,6 +396,10 @@ form button:hover {
   text-align: center;
 }
 
+#app-heading {
+  text-align: center;
+}
+
 .two-column-list {
   columns: 2;
   -webkit-columns: 2;
