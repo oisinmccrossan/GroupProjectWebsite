@@ -110,7 +110,9 @@ window.processPayment = function(event) {
 // Call updateCart on page load to display cart items if any
 updateCart();
 
-function toggleChatbot() {
+// Other existing code...
+
+export function toggleChatbot() {
     var chatbotContainer = document.getElementById('chatbot-container');
     if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
         chatbotContainer.style.display = 'block';
@@ -119,4 +121,7 @@ function toggleChatbot() {
     }
 }
 
+// Ensure the function is globally accessible
 window.toggleChatbot = toggleChatbot;
+
+// Other existing code...
