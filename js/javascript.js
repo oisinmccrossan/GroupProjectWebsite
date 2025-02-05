@@ -109,3 +109,14 @@ window.processPayment = function(event) {
 
 // Call updateCart on page load to display cart items if any
 updateCart();
+
+function toggleChatbot() {
+    var chatbotContainer = document.getElementById('chatbot-container');
+    if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+        chatbotContainer.style.display = 'block';
+    } else {
+        chatbotContainer.style.display = 'none';
+    }
+}
+
+window.toggleChatbot = toggleChatbot;
