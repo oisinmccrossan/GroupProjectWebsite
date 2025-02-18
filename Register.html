@@ -9,7 +9,6 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
         import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
         import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
-        import { toggleChatbot } from "./js/javascript.js"; // Import the toggleChatbot function
 
         // Firebase configuration
         const firebaseConfig = {
@@ -82,13 +81,6 @@
         </form>
     </div>
 
-    <!-- Chatbot toggle button -->
-    <button id="chatbot-toggle" onclick="toggleChatbot()">Chat with us</button>
-
-    <!-- Chatbot container -->
-    <div class="chatbot-container" id="chatbot-container" style="display: none;">
-        <iframe id="chatbot-iframe" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/e18a903b-b10d-4218-adb9-e8f674a83ed9"></iframe>
-    </div>
 
     <footer>
         <div class="container">
@@ -108,7 +100,6 @@
         </div>
     </footer>
 
-    <script src="js/javascript.js" type="module" defer></script>
 
 </body>
 
