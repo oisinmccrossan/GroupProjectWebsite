@@ -37,28 +37,32 @@
             }
         });
 
-        // Fetch leaderboard data from "users" instead of "playerinfo"
+        // Fetch leaderboard data but only show game players (isPlayer: true)
 function fetchLeaderboardData() {
-    const usersRef = ref(db, 'users'); // Updated to fetch from 'users'
-    
+    const usersRef = ref(db, 'users');
+
     get(usersRef).then((snapshot) => {
         if (snapshot.exists()) {
             const leaderboardTable = document.getElementById('leaderboard').getElementsByTagName('tbody')[0];
-            leaderboardTable.innerHTML = ""; // Clear existing table entries
+            leaderboardTable.innerHTML = ""; // Clear previous entries
             const players = [];
 
             snapshot.forEach((childSnapshot) => {
                 const userData = childSnapshot.val();
-                players.push({
-                    name: userData.email || "Unknown", // Get email instead of name
-                    score: parseInt(userData.score, 10) || 0 // Ensure score is an integer
-                });
+
+                // ✅ Only show users with "isPlayer: true"
+                if (userData.isPlayer) {
+                    players.push({
+                        name: userData.email || "Unknown",
+                        score: parseInt(userData.score, 10) || 0
+                    });
+                }
             });
 
-            // Sort players by score in descending order
+            // Sort players by score (highest first)
             players.sort((a, b) => b.score - a.score);
 
-            // Display each player on the leaderboard
+            // Display leaderboard
             players.forEach((player, index) => {
                 const row = leaderboardTable.insertRow();
                 row.innerHTML = `
@@ -68,13 +72,12 @@ function fetchLeaderboardData() {
                 `;
             });
         } else {
-            console.log("No data available in 'users' node.");
+            console.log("No game players found.");
         }
     }).catch((error) => {
-        console.error("Error fetching data: ", error);
+        console.error("Error fetching leaderboard data:", error);
     });
 }
-
 
         // Logout user
         document.getElementById('logout-button').addEventListener('click', () => {
