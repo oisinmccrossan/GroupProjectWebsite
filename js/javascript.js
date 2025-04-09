@@ -110,7 +110,6 @@ window.processPayment = function(event) {
 // Call updateCart on page load to display cart items if any
 updateCart();
 
-// Other existing code...
 
 export function toggleChatbot() {
     var chatbotContainer = document.getElementById('chatbot-container');
@@ -124,4 +123,3 @@ export function toggleChatbot() {
 // Ensure the function is globally accessible
 window.toggleChatbot = toggleChatbot;
 
-// Other existing code...
