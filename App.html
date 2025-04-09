@@ -64,13 +64,13 @@
         </div>
     </div>
 
-    <!-- Chatbot toggle button -->
-    <button id="chatbot-toggle" onclick="toggleChatbot()">Chat with us</button>
-
-    <!-- Chatbot container -->
-    <div class="chatbot-container" id="chatbot-container" style="display: none;">
-        <iframe id="chatbot-iframe" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/e18a903b-b10d-4218-adb9-e8f674a83ed9"></iframe>
-    </div>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+          intent="WELCOME"
+          chat-title="Fin-and-Recycle"
+          agent-id="e18a903b-b10d-4218-adb9-e8f674a83ed9"
+          language-code="en"
+        ></df-messenger>   
     
     <footer>
         <div class="container">
