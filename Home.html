@@ -1,172 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Fin & Recycle</title>
-    <style>
-        /* Reset some default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-            font-family: sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fin & Recycle</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
 
-        video {
-            object-fit: cover;
-            position: absolute; /* Change from relative to absolute */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Ensure the video is behind other content */
-        }
+    video {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
-        /* Navbar styling */
-        .navbar {
-            width: 100%; /* Ensure the navbar spans the full width of the page */
-            background-color: transparent;
-            margin: 0; /* Remove margin */
-            padding: 35px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed; /* Change from absolute to fixed */
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000; /* Ensure the navbar is above other content */
-        }
+    /* Navbar styling */
+    .navbar {
+      width: 100%;
+      background-color: transparent;
+      padding: 35px 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
 
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-        }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
 
-        .navbar ul li {
-            list-style: none;
-            display: inline-block;
-            margin: 0 20px;
-            position: relative;
-        }
+    .navbar ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 10px 15px;
+      position: relative;
+    }
 
-        .navbar ul li a {
-            text-decoration: none;
-            color: cyan;
-            text-transform: uppercase;
-        }
+    .navbar ul li a {
+      text-decoration: none;
+      color: cyan;
+      text-transform: uppercase;
+    }
 
-        .navbar ul li::after {
-            content: '';
-            height: 3px;
-            width: 0;
-            background: #009688;
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            transition: 0.5s;
-        }
+    .navbar ul li::after {
+      content: '';
+      height: 3px;
+      width: 0;
+      background: #009688;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.5s;
+    }
 
-        .navbar ul li:hover::after {
-            width: 100%;
-        }
+    .navbar ul li:hover::after {
+      width: 100%;
+    }
 
-        .navbar img {
-            height: 50px; /* Adjust the height as needed */
-            margin: 0 20px;
-        }
+    .navbar img {
+      height: 50px;
+      margin: 0 20px;
+    }
 
-        .home-page {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Ensure the home page takes up the full height of the viewport */
-            text-align: center;
-        }
+    .home-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
 
-        .content {
-            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-            padding: 20px;
-            border-radius: 10px;
-        }
+    .content {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-        .content p {
-            font-size: 3vw;
-            color: cyan;
-            margin-bottom: 20px;
-            text-align: center;
-            transition: 0.5s;
-            -webkit-text-stroke: 0.5px black;
-        }
+    .content p {
+      font-size: 3vw;
+      color: cyan;
+      margin-bottom: 20px;
+      text-align: center;
+      transition: 0.5s;
+      -webkit-text-stroke: 0.5px black;
+    }
 
-        .content p:hover {
-            -webkit-text-stroke: 2px #fff;
-            color: transparent;
-        }
+    .content p:hover {
+      -webkit-text-stroke: 2px #fff;
+      color: transparent;
+    }
 
-        .content h1 {
-            font-size: 6vw;
-            color: #fff;
-            -webkit-text-stroke: 2px #fff;
-            font-weight: 600;
-            transition: 0.5s;
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: #fff;
-        }
+    .content h1 {
+      font-size: 6vw;
+      color: #fff;
+      -webkit-text-stroke: 2px #fff;
+      font-weight: 600;
+      transition: 0.5s;
+    }
 
-        .content h1:hover {
-            -webkit-text-stroke: 2px #fff;
-            color: transparent;
-        }
+    .content h1:hover {
+      -webkit-text-stroke: 2px #fff;
+      color: transparent;
+    }
 
-        .logo {
-            margin-bottom: 20px;
-            width: 200px;
-            height: 200px;
-        }
-    </style>
+    .logo {
+      margin-bottom: 20px;
+      width: 200px;
+      height: 200px;
+    }
+
+    /* ========================
+   Responsive: Medium Screens (Tablets, up to 1024px)
+======================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar ul li {
+    margin: 0 10px;
+  }
+
+  .product {
+    width: 45%;
+  }
+
+  table#leaderboard {
+    width: 90%;
+  }
+
+  .cart-content,
+  .payment-form {
+    width: 90%;
+  }
+}
+
+/* Hamburger style */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: cyan;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  z-index: 1100;
+}
+
+/* Responsive menu default hidden */
+.menu {
+  display: flex;
+}
+
+/* ======= On small screens only ======= */
+@media (max-width: 640px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 80px; /* Adjust based on navbar height */
+    left: 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+}
 
 
+
+  </style>
 </head>
 
 <body class="home-page">
-    <video playsinline autoplay muted loop>
-        <source src="videos/WebsiteHomeBackground.mp4" type="video/mp4">
-    </video>
-    <div class="navbar">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="Game.html">Game</a></li>
-            <li><a href="App.html">App</a></li>
-            <li><a href="Shop.html">Shop</a></li>
-            <li><a href="Register.html">Register</a></li>
-            <li><a href="Login.html">Login</a></li>
-            <li><a href="unitygame/PlayGame.html">Play the first level of the Game!</a></li>
-        </ul>
-    </div>
+  <video playsinline autoplay muted loop>
+    <source src="videos/WebsiteHomeBackground.mp4" type="video/mp4">
+  </video>
 
-    <img src="img/Fin and Recycle.gif" alt="Group Project Logo" class="logo">
+  <div class="banner">
+        <div class="navbar">
+            <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+            <div class="menu">
+              <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Game.html">Game</a></li>
+                    <li><a href="App.html">App</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="Register.html">Register</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="unitygame/PlayGame.html">Play the first level of the Game!</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
 
-    <div class="content">
-        <h1>Fin & Recycle</h1>
-        <p>Ocean Environmental Awareness</p>
-    </div>
+  <img src="img/Fin and Recycle.gif" alt="Group Project Logo" class="logo">
 
-    
+  <div class="content">
+    <h1>Fin & Recycle</h1>
+    <p>Ocean Environmental Awareness</p>
+  </div>
 
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Fin-and-Recycle"
+    agent-id="e18a903b-b10d-4218-adb9-e8f674a83ed9"
+    language-code="en">
+  </df-messenger>
 
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      intent="WELCOME"
-      chat-title="Fin-and-Recycle"
-      agent-id="e18a903b-b10d-4218-adb9-e8f674a83ed9"
-      language-code="en"
-    ></df-messenger>   
-
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+  
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+  
 </body>
 
 </html>

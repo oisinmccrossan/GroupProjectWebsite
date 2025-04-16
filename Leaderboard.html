@@ -4,6 +4,8 @@
 <head>
     <title>Fin & Recycle</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script type="module">
         // Import Firebase SDK functions
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
@@ -50,7 +52,7 @@ function fetchLeaderboardData() {
             snapshot.forEach((childSnapshot) => {
                 const userData = childSnapshot.val();
 
-                // ✅ Only show users with "isPlayer: true"
+                // Only show users with "isPlayer: true"
                 if (userData.isPlayer) {
                     players.push({
                         name: userData.email || "Unknown",
@@ -94,18 +96,22 @@ function fetchLeaderboardData() {
 </head>
 
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="Game.html">Game</a></li>
-            <li><a href="App.html">App</a></li>
-            <li><a href="Shop.html">Shop</a></li>
-            <li><a href="Register.html">Register</a></li>
-            <li><a href="Login.html">Login</a></li>
-            <li><a href="unitygame/PlayGame.html">Play the first level of the Game!</a></li>
-        </ul>
-        <button id="logout-button" style="display:none;">Logout</button>
-    </div>
+    <div class="banner">
+        <div class="navbar">
+            <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+            <div class="menu">
+              <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Game.html">Game</a></li>
+                    <li><a href="App.html">App</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="Register.html">Register</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="unitygame/PlayGame.html">Play the first level of the Game!</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
 
     <div class="logo-container">
         <img src="img/Fin and Recycle.gif" alt="Group Project Logo" class="logo">
