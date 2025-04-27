@@ -20,6 +20,7 @@
           <li><a href="Shop.html">Shop</a></li>
           <li><a href="Register.html">Register</a></li>
           <li><a href="Login.html">Login</a></li>
+          <li><a href="Eco.html">Environmental Information</a></li>
           <li><a href="unitygame/PlayGame.html">Play the first level of the Game!</a></li>
         </ul>
       </div>
@@ -37,9 +38,17 @@
       <div class="shop-content" style="text-align: center; max-width: 800px; margin: auto;">
         <div id="info-box" style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           <p id="wikipedia-summary" style="font-size: 1.2em;">Click below to learn about Recycling!</p>
-          <button onclick="getWikipediaSummary('Recycling')" style="margin-top: 20px;">Learn About Recycling</button>
-
-          <button onclick="getWikipediaSummary('Ocean pollution')" style="margin-top: 20px;">Learn About Ocean Pollution</button>
+          <div id="info-box" style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <p id="wikipedia-summary" style="font-size: 1.2em;">Click a button to learn about important eco topics!</p>
+          
+            <div style="margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+              <button onclick="getWikipediaSummary('Recycling')" class="eco-button">Learn About Recycling</button>
+              <button onclick="getWikipediaSummary('Ocean pollution')" class="eco-button">Learn About Ocean Pollution</button>
+            </div>
+          
+            <div id="read-more" style="margin-top: 20px;"></div>
+          </div>
+          
 
           <div id="read-more" style="margin-top: 20px;"></div>
         </div>
@@ -60,6 +69,8 @@
           <li><a href="Shop.html">Shop</a></li>
           <li><a href="Register.html">Register</a></li>
           <li><a href="Login.html">Login</a></li>
+          <li><a href="Eco.html">Environmental Information</a></li>
+          <li><a href="unitygame/PlayGame.html">Play the first level of the Game!</a></li>
         </ul>
       </div>
     </div>
