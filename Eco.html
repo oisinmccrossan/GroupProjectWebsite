@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fin & Recycle - Learn About Recycling</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/javascript.js" type="module" defer></script>
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+      <div class="menu">
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Game.html">Game</a></li>
+          <li><a href="App.html">App</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Register.html">Register</a></li>
+          <li><a href="Login.html">Login</a></li>
+          <li><a href="unitygame/PlayGame.html">Play the first level of the Game!</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="logo-container">
+      <img src="img/Fin and Recycle.gif" alt="Group Project Logo" class="logo">
+    </div>
+
+    <div class="content">
+      <h1>🌎 Learn About Recycling 🌱</h1>
+
+      <div class="shop-content" style="text-align: center; max-width: 800px; margin: auto;">
+        <div id="info-box" style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          <p id="wikipedia-summary" style="font-size: 1.2em;">Click below to learn about Recycling!</p>
+          <button onclick="getWikipediaSummary('Recycling')" style="margin-top: 20px;">Learn About Recycling</button>
+
+          <button onclick="getWikipediaSummary('Ocean pollution')" style="margin-top: 20px;">Learn About Ocean Pollution</button>
+
+          <div id="read-more" style="margin-top: 20px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Fin & Recycle. All rights reserved.</p>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="two-column-list">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Game.html">Game</a></li>
+          <li><a href="App.html">App</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+          <li><a href="Register.html">Register</a></li>
+          <li><a href="Login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function getWikipediaSummary(topic) {
+      try {
+        const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(topic)}`;
+        const response = await fetch(url);
+        const data = await response.json();
+
+        document.getElementById('wikipedia-summary').innerText = data.extract;
+
+        if (data.content_urls && data.content_urls.desktop) {
+          document.getElementById('read-more').innerHTML = `
+            <a href="${data.content_urls.desktop.page}" target="_blank" style="color: navy;">Read more on Wikipedia</a>
+          `;
+        } else {
+          document.getElementById('read-more').innerHTML = '';
+        }
+
+      } catch (error) {
+        console.error('Error fetching Wikipedia summary:', error);
+        document.getElementById('wikipedia-summary').innerText = "Couldn't fetch information. Please try again.";
+        document.getElementById('read-more').innerHTML = '';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.querySelector('.hamburger');
+      const menu = document.querySelector('.menu');
+
+      if (hamburger && menu) {
+        hamburger.addEventListener('click', function () {
+          menu.classList.toggle('show');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
