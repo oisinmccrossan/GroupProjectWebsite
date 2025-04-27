@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/javascript.js" type="module"></script> <!-- Link to your existing JavaScript file as a module -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body>
@@ -14,7 +13,7 @@
         <div class="navbar">
             <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
             <div class="menu">
-              <ul>
+                <ul>
                     <li><a href="Home.html">Home</a></li>
                     <li><a href="Game.html">Game</a></li>
                     <li><a href="App.html">App</a></li>
@@ -23,38 +22,39 @@
                     <li><a href="Login.html">Login</a></li>
                     <li><a href="unitygame/PlayGame.html">Play the first level of the Game!</a></li>
                 </ul>
-                </div>
             </div>
         </div>
-
-    <div class="logo-container">
-        <img src="img/Fin and Recycle.gif" alt="Group Project Logo" class="logo">
     </div>
 
+    <div class="main-content"> <!-- Wrap the main content here -->
+        <div class="logo-container">
+            <img src="img/Fin and Recycle.gif" alt="Group Project Logo" class="logo">
+        </div>
 
-    <div class="cart-content">
-        <h2>Shopping Cart</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: €<span id="cart-total">0.00</span></p>
-        <button onclick="checkout()">Checkout</button>
-    </div>
+        <div class="cart-content">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: €<span id="cart-total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
 
-    <div class="payment-form">
-        <h2>Payment Information</h2>
-        <form id="payment-form" onsubmit="processPayment(event)">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="card-number">Card Number:</label>
-            <input type="text" id="card-number" name="card-number" required><br><br>
-            <label for="expiry-date">Expiry Date:</label>
-            <input type="text" id="expiry-date" name="expiry-date" required><br><br>
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required><br><br>
-            <button type="submit">Submit Payment</button>
-        </form>
-    </div>
+        <div class="payment-form">
+            <h2>Payment Information</h2>
+            <form id="payment-form" onsubmit="processPayment(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required><br><br>
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" required><br><br>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required><br><br>
+                <button type="submit">Submit Payment</button>
+            </form>
+        </div>
+    </div> <!-- Main content section ends here -->
 
     <footer>
         <div class="container">
@@ -74,19 +74,18 @@
         </div>
     </footer>
 
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-          const hamburger = document.querySelector('.hamburger');
-          const menu = document.querySelector('.menu');
-      
-          if (hamburger && menu) {
-            hamburger.addEventListener('click', function () {
-              menu.classList.toggle('show');
-            });
-          }
+            const hamburger = document.querySelector('.hamburger');
+            const menu = document.querySelector('.menu');
+        
+            if (hamburger && menu) {
+                hamburger.addEventListener('click', function () {
+                    menu.classList.toggle('show');
+                });
+            }
         });
-      </script>
+    </script>
 </body>
 
 </html>
