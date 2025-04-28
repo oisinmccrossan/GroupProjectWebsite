@@ -639,3 +639,23 @@ footer {
   color: black; /* (optional) makes text easier to read on light cyan */
 }
 
+.play-button-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.play-button {
+  background-color: #00796b; /* Teal/Greenish */
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.play-button:hover {
+  background-color: #004d40; /* Darker teal on hover */
+}
